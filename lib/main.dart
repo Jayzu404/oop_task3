@@ -1,5 +1,6 @@
 import 'game_character.dart';
 import 'fighter.dart';
+import 'mage.dart';
 void main(){
   print('--- Demo base class GameCharacter ---');
   GameCharacter char1 = GameCharacter(name: 'char1', role: 'assasin');
@@ -14,4 +15,10 @@ void main(){
   lapulapu.getInfo(); //override method/inherited
   // lapulapu._armor (unique property but can't access directly because it is private)
   lapulapu.shieldBlock(char2);//unique method
+
+  print('--- Demo derived class Mage ---');
+  Mage lunox = Mage(name: 'lunox', role: 'mage');
+  lunox.getInfo(); //override method/inherited
+  //lunox._mana (unique property but can't access directly because it is private)
+  lunox.castSpell(char2);//unique method
 }
