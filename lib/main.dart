@@ -1,6 +1,8 @@
 import 'game_character.dart';
 import 'fighter.dart';
 import 'mage.dart';
+import 'support.dart';
+
 void main(){
   print('--- Demo base class GameCharacter ---');
   GameCharacter char1 = GameCharacter(name: 'char1', role: 'assasin');
@@ -21,4 +23,10 @@ void main(){
   lunox.getInfo(); //override method/inherited
   //lunox._mana (unique property but can't access directly because it is private)
   lunox.castSpell(char2);//unique method
+
+  print('--- Demo derived class Support ---');
+  Support rafaela = Support(name: 'rafaela', role: 'support');
+  rafaela.getInfo(); //override method/inherited
+  //rafaela._movementSpeed (unique property but can't access directly because it is private)
+  rafaela.heal(char2, 100);//unique method
 }
