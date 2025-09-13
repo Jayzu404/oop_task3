@@ -1,8 +1,8 @@
-import 'package:oop_task3/support.dart';
-
 import 'game_character.dart';
 import 'fighter.dart';
 import 'mage.dart';
+import 'support.dart';
+
 void main(){
   print('--- Demo base class GameCharacter ---');
   GameCharacter char1 = GameCharacter(name: 'char1', role: 'assasin');
